@@ -1,0 +1,41 @@
+{
+ "name": "Wine Aroma Wheel",
+ "description": "The Davis Wine Aroma Wheel is divided into several sections to help you visualize the different flavors, scents and aromatic qualities found in most red and white wines, regardless of the grape variety.  The same aromatic complexities and sensations pictured on the wine aroma wheel are found in red and white wines all over the world, from Bordeaux, to California and the Rhone Valley, as well as every other viticultural area.",
+ "licenses": [{
+   "type": "MIT",
+   "url": "https://joshuapaulbarnard.github.io/Interactive_Wine_Aroma_Wheel/LICENSE" }],
+ "image": "images/Grape-2.jpg",
+ "children": [
+  {
+   "name": "Microbiological",
+   "description": "Microbiological Scents are often the result of faults in the wine.",
+   "children": [
+    {
+     "name": "Yeasty",
+     "description": "Yeasty Scents",
+     "children": [
+      {"name": "Leesy", "description": "Descriptor of a wine that possesses a rich aroma and/or flavor that is a direct result of the wine resting on the lees. Lees are the solids, a result of fermentation, that are found on the bottom of a vat. These solid particles are comprised of grape skins, pulp, and yeast.", "size": 1},
+      {"name": "Baker's Yeast", "description": "Scents of Baker's Yeast", "size": 1}
+     ]
+   },
+    {
+     "name": "Lactic",
+     "description": "Lactic Scents",
+     "children": [
+      {"name": "Yogurt", "description": "Scents of Yogurt", "size": 1},
+      {"name": "Sweaty", "description": "Scents of Sweat", "size": 1},
+      {"name": "Sauerkraut", "description": "Scents of Sauerkraut", "size": 1}
+     ]
+   },
+    {
+     "name": "Other",
+     "description": "Other Microbiological Scents",
+     "children": [
+      {"name": "Mousy", "description": "Scents reminiscence of the odors from Mouses", "size": 1},
+      {"name": "Horsey", "description": "Scents reminiscence of the odors from Horses", "size": 1}
+     ]
+    }
+   ]
+  }
+ ]
+}

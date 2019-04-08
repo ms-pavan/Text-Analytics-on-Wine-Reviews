@@ -1,0 +1,71 @@
+{
+ "name": "Wine Aroma Wheel",
+ "description": "The Davis Wine Aroma Wheel is divided into several sections to help you visualize the different flavors, scents and aromatic qualities found in most red and white wines, regardless of the grape variety.  The same aromatic complexities and sensations pictured on the wine aroma wheel are found in red and white wines all over the world, from Bordeaux, to California and the Rhone Valley, as well as every other viticultural area.",
+ "licenses": [{
+   "type": "MIT",
+   "url": "https://joshuapaulbarnard.github.io/Interactive_Wine_Aroma_Wheel/LICENSE" }],
+ "image": "images/Grape-2.jpg",
+ "children": [
+  {
+   "name": "Fruit",
+   "description": "Fruity Aromas",
+   "children": [
+    {
+     "name": "Citrus",
+     "description": "Citrus Aromas",
+     "children": [
+      {"name": "Grapefruit", "description": "Aromas of Grapefruit", "size": 1},
+      {"name": "Lemon", "description": "Aromas of Lemon", "size": 1}
+     ]
+    },
+    {
+     "name": "Berry",
+     "description": "Berry Aromas",
+     "children": [
+      {"name": "Blackberry", "description": "Aromas of Blackberry", "size": 1},
+      {"name": "Raspberry", "description": "Aromas of both Red Raspberry and Black Raspberry", "size": 1},
+      {"name": "Strawberry", "description": "Aromas of Strawberry", "size": 1},
+      {"name": "Black Currant", "description": "Aromas of Black Currant (Cassis)", "size": 1}
+     ]
+    },
+    {
+     "name": "(Tree) Fruit",
+     "description": "Tree Fruit Aromas",
+     "children": [
+      {"name": "Cherry", "description": "Aromas of both Black Cherry and Red Cherry", "size": 1},
+      {"name": "Apricot", "description": "Aromas of Apricot", "size": 1},
+      {"name": "Peach", "description": "Aromas of Peach", "size": 1},
+      {"name": "Apple", "description": "Aromas of Apple", "size": 1}
+     ]
+   },
+   {
+    "name": "(Tropical) Fruit",
+    "description": "Tropical Fruit Aromas",
+    "children": [
+     {"name": "Pineapple", "description": "Aromas of Pineapple", "size": 1},
+     {"name": "Melon", "description": "Aromas of Melon", "size": 1},
+     {"name": "Banana", "description": "Aromas of Banana", "size": 1}
+    ]
+   },
+   {
+    "name": "(Dried) Fruit",
+    "description": "Dried Fruit Aromas",
+    "children": [
+     {"name": "Strawberry Jam", "description": "Aromas of Strawberry Jam", "size": 1},
+     {"name": "Raisin", "description": "Aromas of Raisins", "size": 1},
+     {"name": "Prune", "description": "Aromas of Prunes", "size": 1},
+     {"name": "Fig", "description": "Aromas of Figs", "size": 1}
+    ]
+   },
+   {
+    "name": "Other",
+    "description": "Other Fruity Aromas",
+    "children": [
+     {"name": "Artificial Fruit", "description": "Aromas of Artificial Fruit", "size": 1},
+     {"name": "Methyl Anthranilate", "description": "Aromas of Methyl Anthranilate", "size": 1}
+    ]
+   }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "name": "Wine Aroma Wheel",
+ "description": "The Davis Wine Aroma Wheel is divided into several sections to help you visualize the different flavors, scents and aromatic qualities found in most red and white wines, regardless of the grape variety.  The same aromatic complexities and sensations pictured on the wine aroma wheel are found in red and white wines all over the world, from Bordeaux, to California and the Rhone Valley, as well as every other viticultural area.",
+ "licenses": [{
+   "type": "MIT",
+   "url": "https://joshuapaulbarnard.github.io/Interactive_Wine_Aroma_Wheel/LICENSE" }],
+ "image": "images/Grape-2.jpg",
+ "children": [
+{
+   "name": "Oxidized",
+   "description": "Oxidized smells are often the result of faults in the wine.",
+   "children": [
+    {
+     "name": "Oxidized",
+     "description": "Smells of Oxidization",
+     "children": [
+      {"name": "Sherry", "description": "Scents of Sherry", "size": 1}
+     ]
+    }
+   ]
+  }
+ ]
+}

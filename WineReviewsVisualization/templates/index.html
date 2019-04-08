@@ -1,0 +1,241 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Visualization</title>
+    <link rel="stylesheet" href="static/css/scatter.css" charset="utf-8">
+	<link rel="stylesheet" href="static/css/jquery-ui.css">
+	<!-- load below file locally
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">--> 
+<style>
+
+    #slider { margin: 10px; }
+  .ui-slider-horizontal
+  {
+  height:.8em;
+  width: 20em;
+  }
+  div.tooltip {	
+    position: absolute;			
+    text-align: left;		
+	font-weight: bold;	
+     line-height:1;
+	padding: 11px;			
+    background: rgba(37, 34, 34, 0.8);	
+	color: #fbf9ee;
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;			
+}
+  
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+circle,
+path {
+  cursor: pointer;
+}
+
+#aroma circle {
+  fill: none;
+  pointer-events: all;  
+}
+
+#tooltip { background-color: white;
+			  padding: 3px 5px;
+			  border: 1px solid black;
+			  text-align: center;}
+
+html {
+	font-family: sans-serif;
+	<!--font-size: 7px; <!--Added this to reduce size of the text in wheel-->
+
+}
+h1 {
+    color: darkred;
+}
+.header img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #555;
+}
+
+.header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+  color: darkred;
+}
+<!--#rightHalf {
+   background: url(static/images/wine_flavors.jpg);
+   width: 100%;
+   position: absolute;
+   right: 0px;
+   height: 35%;
+}
+<!--#content {
+    position: relative;
+}
+#content img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}-->
+
+  </style>
+  
+  <script src="static/js/jquery-1.12.4.js"></script>
+  <script src="static/js/jquery-ui.js"></script>
+  
+  <!-- load below two files locally
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script> --> 
+  
+  <link rel="icon" type="image/png" href="static/images/grapes-icon.png">
+
+
+	<!-- load custom css -->
+	 <!-- <link rel="stylesheet" type="text/css" href="css/Interactive_Aroma_Wheel.css"> -->
+  </head>
+  <body bgcolor="#ffe6e6">
+  <!--<div id="content">
+    <img src="images/wine_flavors.jpg" style="width:1000px;height:300px;"/>
+  </div>-->
+ 
+  <div class="header">
+  <img src="static/images/grapes-icon.png" alt="logo" />
+  <h1 style="font-family:Georgia; font-style: italic;">What's in my Wine!!!</h1>
+  <p style= "color:darkred"> <q> A person with increasing knowledge and sensory education may derive infinite enjoyment from Wine. - Ernest Hemingway </q></p>
+  </div>
+  
+  <br><br>
+  
+      <div style="width: 100%; display: table;">
+    <div style="display: table-row">
+        <div id="countryMenu" style="width: 600px; display: table-cell;">  
+		<p id="menu" class="menuchoice" style="font-size:20px">Choose a Country:<select> <!--Added font size and changed label -->
+<option value="Italy">Italy</option>
+<option value="Portugal">Portugal</option>
+<option value="US">US</option>
+<option value="Spain">Spain</option>
+<option value="France">France</option>
+<option value="Germany">Germany</option>
+<option value="Argentina">Argentina</option>
+<option value="Chile">Chile</option>
+<option value="Australia">Australia</option>
+<option value="Austria">Austria</option>
+<option value="South Africa">South Africa</option>
+<option value="New Zealand">New Zealand</option>
+<option value="Israel">Israel</option>
+<option value="Hungary">Hungary</option>
+<option value="Greece">Greece</option>
+<option value="Romania">Romania</option>
+<option value="Mexico">Mexico</option>
+<option value="Canada">Canada</option>
+<option value="Turkey">Turkey</option>
+<option value="Czech Republic">Czech Republic</option>
+<option value="Slovenia">Slovenia</option>
+<option value="Luxembourg">Luxembourg</option>
+<option value="Croatia">Croatia</option>
+<option value="Georgia">Georgia</option>
+<option value="Uruguay">Uruguay</option>
+<option value="England">England</option>
+<option value="Lebanon">Lebanon</option>
+<option value="Serbia">Serbia</option>
+<option value="Brazil">Brazil</option>
+<option value="Moldova">Moldova</option>
+<option value="Morocco">Morocco</option>
+<option value="Peru">Peru</option>
+<option value="India">India</option>
+<option value="Bulgaria">Bulgaria</option>
+<option value="Cyprus">Cyprus</option>
+<option value="Armenia">Armenia</option>
+<option value="Switzerland">Switzerland</option>
+<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+<option value="Ukraine">Ukraine</option>
+<option value="Slovakia">Slovakia</option>
+<option value="Macedonia">Macedonia</option>
+<option value="China">China</option>
+<option value="Egypt">Egypt</option>
+</select>
+</p>
+		
+		</div>
+        <div id="priceMenu" style="display: table-cell;"> 
+			<p style="font-size:20px"> <label for="amount">Select Price Range:</label> <!--Added font size and changed label -->
+  <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	
+	<div id="slider-range"></div>
+	<div id="slider11"></div>
+
+		</div>
+		
+		 <div id="aromaMenu" style="display: table-cell;"> 
+		 <p id="flavor" class="menuchoice"style="font-size:20px">What Aroma?:<select> <!--Added font size and changed label -->
+  <option value="all">All Aroma</option>
+  <option value="fruit">fruit</option>
+  <option value="herbaceous">herbaceous</option>
+  <option value="earthy">earthy</option>
+  <option value="spice">spice</option>
+  <option value="wood">wood</option>
+  <option value="caramel">caramel</option>
+  <option value="chemical">chemical</option>
+  <option value="floral">floral</option>
+  <option value="microbiological">microbiological</option>
+  <option value="nutty">nutty</option>
+  <option value="pungent">pungent</option>
+  <option value="oxidized">oxidized</option>
+  </select>
+</p>
+	&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<input type="button" id="ResetWheel" name="ResetWheel" value="ResetWheel">
+		</div>
+    </div>
+</div>
+  
+  
+  
+
+<!--Moved the end of div below this -->
+<div style="width: 100%; display: table;">
+    <div style="display: table-row">
+        <div id="scatter" style="display: table-cell;">  </div>
+        <div id="aroma" style="display: table-cell;">  </div>
+    </div>
+</div>
+ 
+  <!-- Commented these lines as they are not used -->
+  <!--<div id="aroma1"></div>--> 
+  <!--&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-->
+    <!--<div id="scatter1"></div>-->
+<div id="reviewContent"></div>
+    
+    <script src="static/js/d3.v3.min.js" charset="utf-8"></script>
+	<script src="static/js/d3.tip.v0.6.3.js"></script>
+
+    <!-- -- load below two files locally
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>-->
+	<!-- <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script> -->
+	
+	<!-- load javascript for creating the sunburst chart -->
+	<!-- <script src="js/Interactive_Aroma_Wheel.js"></script> -->
+
+    <script src="static/js/wines.js" charset="utf-8"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{
+ "name": "Wine Aroma Wheel",
+ "description": "The Davis Wine Aroma Wheel is divided into several sections to help you visualize the different flavors, scents and aromatic qualities found in most red and white wines, regardless of the grape variety.  The same aromatic complexities and sensations pictured on the wine aroma wheel are found in red and white wines all over the world, from Bordeaux, to California and the Rhone Valley, as well as every other viticultural area.",
+ "licenses": [{
+   "type": "MIT",
+   "url": "https://joshuapaulbarnard.github.io/Interactive_Wine_Aroma_Wheel/LICENSE" }],
+ "image": "images/Grape-2.jpg",
+ "children": [
+  {
+   "name": "Floral",
+   "description": "Floral Aromas",
+   "children": [
+    {
+     "name": "Floral",
+     "description": "Floral Aromas",
+     "children": [
+      {"name": "Geranium", "description": "Aromas of Geranium", "size": 1},
+      {"name": "Violet", "description": "Aromas of Violet", "size": 1},
+      {"name": "Rose", "description": "Aromas of Rose", "size": 1},
+      {"name": "Orange Blossom", "description": "Aromas of Orange Blossom", "size": 1}
+     ]
+    }
+   ]
+  }
+ ]
+}

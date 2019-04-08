@@ -1,0 +1,46 @@
+{
+ "name": "Wine Aroma Wheel",
+ "description": "The Davis Wine Aroma Wheel is divided into several sections to help you visualize the different flavors, scents and aromatic qualities found in most red and white wines, regardless of the grape variety.  The same aromatic complexities and sensations pictured on the wine aroma wheel are found in red and white wines all over the world, from Bordeaux, to California and the Rhone Valley, as well as every other viticultural area.",
+ "licenses": [{
+   "type": "MIT",
+   "url": "https://joshuapaulbarnard.github.io/Interactive_Wine_Aroma_Wheel/LICENSE" }],
+ "image": "images/Grape-2.jpg",
+ "children": [  
+        {
+         "name": "Herbaceous",
+         "description": "Herbaceous or Vegetative Aromas can sometimes be the result of faults in the wine.",
+         "children": [
+          {
+           "name": "Fresh",
+           "description": "Fresh Aromas",
+           "children": [
+            {"name": "Cut Grass", "description": "Aromas of Cut Green Grass", "size": 1},
+            {"name": "Bell Pepper", "description": "Aromas of Bell Pepper", "size": 1},
+            {"name": "Eucalyptus", "description": "Aromas of Eucalyptus", "size": 1},
+            {"name": "Mint", "description": "Aromas of Mint", "size": 1}
+           ]
+          },
+          {
+           "name": "Canned",
+           "description": "Canned/Cooked Aromas",
+           "children": [
+            {"name": "Green Beans", "description": "Aromas of Green Beans", "size": 1},
+            {"name": "Asparagus", "description": "Aromas of Asparagus", "size": 1},
+            {"name": "Green Olive", "description": "Aromas of Green Olive", "size": 1},
+            {"name": "Black Olive", "description": "Aromas of Black Olive", "size": 1},
+            {"name": "Artichoke", "description": "Aromas of Artichoke", "size": 1}
+           ]
+          },
+          {
+           "name": "Dried",
+           "description": "Dried Scents",
+           "children": [
+            {"name": "Hay", "description": "Scents of Hay/Straw", "size": 1},
+            {"name": "Tea", "description": "Scents of Tea", "size": 1},
+            {"name": "Tobacco", "description": "Scents of Tobacco", "size": 1}
+           ]
+         }
+        ]
+      }
+ ]
+}
