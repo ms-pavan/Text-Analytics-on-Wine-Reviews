@@ -1,7 +1,7 @@
 # Wine Reviews
 
 Wine aroma wheel and scatter plot interactive visualization tool that helps user’s select wines of their preference. Created a flask web application to run this tool on server and hosted it on Google Cloud. Check the live demo in the below link:
-https://winereviews.appspot.com/wine
+https://winereviews.appspot.com/wines
 
 This project is divided into 2 parts
 a. Data Cleaning and Aroma Categorization: This folder contains code on data cleaning and aroma labeling using each wine description and aroma wheel.
