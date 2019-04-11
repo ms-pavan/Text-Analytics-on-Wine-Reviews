@@ -2,12 +2,16 @@
 
 ### Project Description
 Wine aroma wheel and scatter plot interactive D3 visualization tool that helps user’s select wines of their preference. Created a flask web application to run this tool on server and hosted it on Google Cloud. Check the live demo in the below link:
-https://winereviews.appspot.com/wines
+https://winereviews.appspot.com/wines  
 
+### Data    
+https://www.kaggle.com/zynicide/wine-reviews    
+
+### Approach    
 This project is divided into 2 parts
 a. Data Cleaning and Aroma Categorization: This folder contains code on data cleaning and aroma labeling using each wine description and aroma wheel.
 b. WineReviewsVisualization: This folder contains code to create Interactive D3 Visualization using data generated in step 1.
-
+  
 ### How to run this application?  
 
 Run Locally:  
